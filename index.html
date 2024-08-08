@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="stopwatch">
+      <h1 class="title">Stopwatch</h1>
+
+      <div id="displayTimer">00:00:00</div>
+      <ul class="laps" id="lapDisplay"></ul>
+    </div>
+    <div class="actionButton">
+      <button class="resetTimer hidden" id="stop">
+        <i class="ri-stop-fill"></i>
+      </button>
+      <button class="startTimer initial" id="start">
+        <i class="ri-play-fill"></i>
+      </button>
+      <button class="lapTimer hidden" id="lap">
+        <i class="ri-triangular-flag-fill"></i>
+      </button>
+    </div>
+
+    <script src="./assets/js/main.mjs"></script>
+  </body>
+</html>
