@@ -14,8 +14,6 @@ let timer;
 let laps = [];
 
 const displayButton = () => {
-  stopButton.classList.remove("hidden");
-  lapButton.classList.remove("hidden");
   startButton.classList.remove("initial");
 };
 
@@ -23,11 +21,15 @@ const start = () => {
   if (!isStart) {
     startButton.innerHTML = '<i class="ri-pause-fill"></i>';
     startButton.style.padding = "7.5px 4px 3px 6px";
+    lapButton.classList.remove('hidden')
+    stopButton.classList.add('hidden')
     timer = setInterval(play, 10);
     isStart = true;
   } else {
     startButton.innerHTML = '<i class="ri-play-fill"></i>';
     startButton.style.padding = "7.5px 4px 3px 9px";
+    stopButton.classList.remove("hidden");
+    lapButton.classList.add('hidden')
     clearInterval(timer);
     isStart = false;
   }
